@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="57.983" height="56.183" viewBox="0 0 57.983 56.183">
+  <defs>
+    <filter id="Rectangle_Copy_2" x="6.458" y="0" width="51.525" height="56.183" filterUnits="userSpaceOnUse">
+      <feOffset dx="6" dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feFlood flood-color="#121120"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_31" data-name="Group 31" transform="translate(0 12)">
+    <g id="Rectangle" transform="translate(0 0)" fill="#fff" stroke="#fff" stroke-miterlimit="10" stroke-width="1">
+      <rect width="15.525" height="10.868" rx="1.568" stroke="none"/>
+      <rect x="0.5" y="0.5" width="14.525" height="9.868" rx="1.068" fill="none"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 0, -12)" filter="url(#Rectangle_Copy_2)">
+      <rect id="Rectangle_Copy_2-2" data-name="Rectangle Copy 2" width="15.525" height="20.183" rx="1.568" transform="translate(18.46 12)" fill="#1a91fa"/>
+    </g>
+    <rect id="Rectangle_Copy_5" data-name="Rectangle Copy 5" width="15.525" height="20.183" rx="1.568" transform="translate(0 13.973)" fill="#1a91fa"/>
+    <g id="Rectangle_Copy_3" data-name="Rectangle Copy 3" transform="translate(18.458 23.288)" fill="#fff" stroke="#fff" stroke-miterlimit="10" stroke-width="1">
+      <rect width="15.525" height="10.868" rx="1.568" stroke="none"/>
+      <rect x="0.5" y="0.5" width="14.525" height="9.868" rx="1.068" fill="none"/>
+    </g>
+  </g>
+</svg>

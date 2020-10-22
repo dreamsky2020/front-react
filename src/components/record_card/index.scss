@@ -1,0 +1,110 @@
+@import '~sass/variables.scss';
+
+#dashboar-record-card {
+    border-radius: 8px;
+    color: #E1E1E1;
+    margin-bottom: 52px;
+
+    .header{
+        background: #0D0D19;
+        border-radius: 8px;
+        font-size: 21px;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 19px 26px;
+
+        .vs-language {
+            display: flex;
+            align-items: center;
+
+            span {
+                &:first-child {
+                    font-weight: bold;
+                }
+
+                &:last-child {
+                    color: #ABABAB;
+                }
+            }
+
+            img {
+                padding: 0 5px;
+            }
+        }
+
+        a {
+            color: #0087CB;
+            text-transform: lowercase;
+            text-decoration: underline;
+            transition: 0.3s ease;
+
+            &:hover {
+                filter: brightness(2.5);
+            }
+        }
+    }
+
+    .card-body {
+        background: #010412;
+        text-transform: uppercase;
+        padding: 10px 26px;
+        border-radius: 0 0 8px 8px;
+
+        .item {
+            display: flex;
+            padding: 10px 0 10px 15px ;
+            justify-content: space-between;
+
+            div {
+                width: 50%;
+                display: flex;
+                align-items: center;
+
+                &:first-child {
+                    position: relative;
+
+                    img {
+                        position: absolute;
+                        left: -40px;
+                        padding-top: 5px;
+                    }
+
+                    span {
+                        margin-left: 30px;
+                    }
+                }
+
+                &:last-child {
+                    justify-content: center;
+                }
+            }
+            
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    #dashboar-record-card {
+        .card-body {
+            .item div:last-child {
+                justify-content: flex-end;
+                width: 140px;
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    #dashboar-record-card {
+        .header {
+            flex-wrap: wrap;
+
+            a {
+                width: 100%;
+                text-align: right;
+            }
+        }
+    }
+}

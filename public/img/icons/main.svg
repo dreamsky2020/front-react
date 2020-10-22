@@ -1,0 +1,9 @@
+<svg id="Component_16_1" data-name="Component 16 – 1" xmlns="http://www.w3.org/2000/svg" width="33.983" height="34.156" viewBox="0 0 33.983 34.156">
+  <g id="Rectangle" fill="#fff" stroke="#fff" stroke-miterlimit="10" stroke-width="1">
+    <rect width="15.525" height="10.868" rx="1.568" stroke="none"/>
+    <rect x="0.5" y="0.5" width="14.525" height="9.868" rx="1.068" fill="none"/>
+  </g>
+  <rect id="Rectangle_Copy_2" data-name="Rectangle Copy 2" width="15.525" height="20.183" rx="1.568" transform="translate(18.458)" fill="#1a91fa"/>
+  <rect id="Rectangle_Copy_5" data-name="Rectangle Copy 5" width="15.525" height="20.183" rx="1.568" transform="translate(0 13.973)" fill="#1a91fa"/>
+  <rect id="Rectangle_Copy_3" data-name="Rectangle Copy 3" width="15.525" height="10.868" rx="1.568" transform="translate(18.458 23.288)" fill="#fff"/>
+</svg>
