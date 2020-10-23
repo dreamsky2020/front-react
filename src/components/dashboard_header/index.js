@@ -54,7 +54,7 @@ export class index extends Component {
                         </Link>
                         <div className="help-info">
                             <button className="icon-btn">
-                                <img src="./img/icons/Icon.png" alt="icon" />
+                                <img src="./img/icons/icon.png" alt="icon" />
                             </button>
                             <button className="icon-btn">
                                 <img src="./img/icons/Shape.png" alt="icon" />
