@@ -1,0 +1,74 @@
+#dashboard-setting-card {
+    background: #12131f;
+    box-shadow: 0 28px 45px rgba(0,0,0,.16);
+    border: 1px solid #707070;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    width: 90%;
+
+    .notification {
+        padding-left: 50px;
+        
+        .card-title {
+            color: #E1E1E1;
+            font-size: 30px;
+        }
+
+        .card-description {
+            color: #ABABAB;
+            font-size: 20px;
+        }
+    }
+
+    .switch-active {
+        .react-switch-bg {
+            box-shadow: 0 6px 17px #0087CB;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1200px){
+    #dashboard-setting-card {
+        .notification {
+            padding-left: 10px;
+
+            .card-title {
+                font-size: 22px;
+            }
+
+            .card-description {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px){
+    #dashboard-setting-card {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 575px){
+    #dashboard-setting-card {
+        padding: 15px;
+        align-items: unset;
+
+        .notification {
+            padding-left: 0px;
+            
+            .card-title {
+                font-size: 16px;
+            }
+
+            .card-description {
+                font-size: 12px;
+            }
+        }
+    }
+}

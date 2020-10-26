@@ -10,7 +10,6 @@
     margin-right: 20px;
     animation: fade-down 0.8s ease-out;
 
-
     .header-section {
         display: flex;
         column-gap: 45px;
@@ -108,6 +107,10 @@
                 color: #0087CB;
                 text-decoration: underline;
                 font-size: 22px;
+
+                &:hover {
+                    filter: brightness(2.5);
+                }
             }
         }
 
@@ -128,20 +131,96 @@
     }
 }
 
+@media (max-width: 1600px) {
+    #award-card {
+        padding: 30px 20px;
+        margin-bottom: 30px;
+        margin-right: 15px;
+    
+        .header-section {
+            column-gap: 20px;
+            padding-bottom: 25px;
+    
+            .img-section {
+                width: 28%;
+                padding-top: 28%;
+            }
+    
+            .description {
+                flex: 1;
+    
+                .header {
+                    padding-bottom: 20px;
+    
+                    .title {
+                        color: white !important;
+                    }
+    
+                    .score {
+                        width: 60px;
+                        height: 35px;
+                        padding: 2px 0px 0 10px;
+    
+                        span {
+                            font-size: 20px;
+                        }
+    
+                        img {
+                            top: -27px;
+                            left: -3px;
+                        }
+                    }
+                }
+    
+                .info {
+                    font-size: 12px;
+                }
+            }
+        }
+    
+        .footer-section {
+            padding-top: 25px;
+    
+            .right-section {
+                flex: 1;
+                row-gap: 5px;
+    
+                .circle {
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 10px;
+                }
+    
+                p {
+                    font-size: 16px;
+                }
+    
+
+                .bar {
+                    width: 2px;
+                    height: 14px;
+                }
+    
+                a {
+                    font-size: 16px;
+                }
+            }
+    
+            button {
+                font-size: 16px;
+    
+                img {
+                    width: 24px;
+                    margin-right: 10px;;
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 992px ){
     #award-card {
         margin-right: 0px;
-
-        .header-section {
-            flex-direction: column;
-            align-items: center;
-
-            .img-section {
-                margin-bottom: 20px;
-                width: 50%;
-                padding-top: 50%;
-            }
-        }
 
         .footer-section {
             flex-direction: column;
@@ -163,25 +242,60 @@
     }
 }
 
+@media (max-width: 768px ){
+    #award-card {
+
+        .footer-section {
+            flex-direction: row;
+        }
+    }
+}
+
 @media (max-width: 575px ){
     #award-card {
-        padding: 30px 20px;
+        padding: 10px;
+        border: none;
         
         .header-section {
+            flex-direction: column;
+            align-items: center;
 
             .img-section {
-                width: 90%;
-                padding-top: 90%;
+                width: 100%;
+                padding-top: 100%;
             }
 
             .description {
                 .header {
-                    justify-content: flex-end !important;
+                    // justify-content: flex-end !important;
+                    flex-direction: row !important;
+                    align-items: center !important;
                     row-gap: 10px;
 
                     .title {
                         width: 100%;
+                        padding-bottom: 0px !important;
                     }
+
+                    .score {
+                        img {
+                            left: -10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer-section {
+            flex-direction: column;
+
+            .right-section {
+                p{
+                    font-size: 14px;
+                }
+
+                .bar {
+                    margin: 0 2px;
                 }
             }
         }

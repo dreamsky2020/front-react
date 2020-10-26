@@ -5,6 +5,7 @@ import Header from 'components/dashboard_header'
 import RightCard from 'components/record_card'
 import AwardCard from 'components/award_card'
 import RankTable from 'components/rank_table'
+import Footer from 'components/dashboard_footer'
 
 import './index.scss'
 
@@ -24,6 +25,10 @@ export class index extends Component {
         this.changeTabs = this.changeTabs.bind(this);
         this.selectClick = this.selectClick.bind(this);
         this.handleOutsideClick = this.handleOutsideClick.bind(this);
+    }
+
+    componentWillUnmount(){
+        document.removeEventListener('click', this.handleOutsideClick, false);
     }
 
     changeTabs(tab) {
@@ -64,7 +69,7 @@ export class index extends Component {
                 <div className="route-wrapper" id="dashboard-records">
                     <SidebarMenu />
                     <div className="main-panel">
-                        <Header />
+                        <Header searchBar={true}/>
                         
                         <div className="content">
                             <div className="analysis-section">
@@ -332,9 +337,8 @@ export class index extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="dashboard-footer">
-                    @ Learning Creators 2020
-                </div>
+
+                <Footer />
             </div>
         )
     }

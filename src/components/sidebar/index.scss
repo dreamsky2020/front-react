@@ -4,7 +4,7 @@
 
     .logo-section {
         height: 97px;
-        margin-bottom: 76px;
+        margin-bottom: 50px;
 
         .logo {
             height: 100%;
@@ -80,9 +80,39 @@
     }
 }
 
+@media (max-width: 1600px) {
+    #sidebar-menu {
+        .logo-section {
+            margin-bottom: 50px;
+        }
+
+        .navbar-container {
+            ul {
+                li {
+                    padding-bottom: 25px;
+                    .nav-item {
+                        height: 60px;
+
+                        img {
+                            width: 25px;
+                        }
+                    }
+
+                    &:last-child {
+                        padding-top: 120px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 768px) {
     #sidebar-menu {
-        display: none;
+        // display: none;
+    visibility: hidden;
+    margin-left: -200px;
+
         background: #000104;
         z-index: 9999;
         width: 100vw;

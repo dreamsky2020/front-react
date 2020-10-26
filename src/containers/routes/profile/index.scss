@@ -1,0 +1,941 @@
+@import '~sass/variables.scss';
+
+#dashboard-profile {
+    .main-panel {
+        .content {
+            min-height: calc(100vh - 173px);
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/general/black-texture-background-1080P-wallpaper-middle-size.png) fixed center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            padding: 0 64px 70px 64px;
+
+            .dashboard-header-title {
+                font-size: 40px;
+                color: $text-color;
+                padding-bottom: 40px;
+            }
+
+            .main-body {
+                .card-style {
+                    background: #12131F;
+                    box-shadow: 0px 28px 45px #00000029;
+                    border: 1px solid #707070;
+                    border-radius: 10px;
+                    margin-bottom: 50px;
+                }
+
+                display: flex;
+                column-gap: 50px;
+
+                .profile-info {
+                    width: 43%;
+
+                    .personal-profile {
+                        padding: 40px 30px;
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        row-gap: 80px;
+
+                        .rounded-bar {
+                            width: 10px;
+                            height: 90%;
+                            border-radius: 10px;
+                        }
+
+                        .item {
+                            width: 50%;
+                            display: flex;
+                            align-items: center;
+                            column-gap: 20px;
+
+                            .info {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;
+
+                                .title {
+                                    font-size: 20px;
+                                    color: #E1E1E1;
+                                    margin-bottom: 0px;
+                                    opacity: 0.59;
+                                }
+
+                                .name {
+                                    color: #E1E1E1;
+                                    font-size: 30px;
+                                    margin-bottom: 0px;
+                                }
+                            }
+                        }
+
+                        .user-main-profile {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            
+                            .user-photo {
+                                width: 200px;
+                                padding-top: 200px;
+                                background-position: center center !important;
+                                border-radius: 100%;
+                                background-size: cover !important;
+                                background-repeat: no-repeat !important;
+                            }
+
+                            .user-name {
+                                font-size: 30px;
+                                color: #C0C0C2;
+                                text-align: center;
+                                margin-top: 40px;
+                            }
+
+                            .user-email {
+                                font-size: 20px;
+                                color: #E1E1E1;
+                                text-align: center;
+                            }
+                        }
+
+                        .bottom {
+                            display: flex;
+                            flex-wrap: wrap;
+                            row-gap: 60px;
+                            padding-left: 40px;
+
+                            .telegram-name {
+                                .rounded-bar {
+                                    background-color: #CB8E00;
+                                    box-shadow: 0 3px 6px #CB8E00;
+                                }
+                            }
+
+                            .telegram-id {
+                                .rounded-bar {
+                                    background-color: #FC4810;
+                                    box-shadow: 0 3px 6px #FC4810;
+                                }
+                            }                                
+                            
+                            .city {
+                                .rounded-bar {
+                                    background-color: #6B54E3;
+                                    box-shadow: 0 3px 6px #6B54E3;
+                                }
+                            }
+
+                            .country {
+                                .rounded-bar {
+                                    background-color: #0087CB;
+                                    box-shadow: 0 3px 6px #0087CB;
+                                }
+                            }
+                        }
+                    }
+
+                    .personal-info {
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 50px;
+                        padding: 50px 0px 50px 80px;
+
+                        .card-title {
+                            font-size: 30px;
+                            color: #E1E1E1;
+                            margin-bottom: 0px;
+                        }
+
+                        .item {
+                            display: flex;
+                            column-gap: 20px;
+
+                            img {
+                                width: 60px;
+                                height: 60px;
+                            }
+
+                            .info {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;
+
+                                .title {
+                                    font-size: 24px;
+                                    color: #fff;
+                                    margin-bottom: 0px;
+                                }
+
+                                .value {
+                                    color: #ABABAB;
+                                    opacity: 0.66;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .info-update {
+                    flex: 1;
+
+                    .update-photo {
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 40px 30px;
+
+                        .photo-section {
+                            display: flex;
+                            column-gap: 20px;
+                            align-items: center;
+
+                            .user-photo {
+                                width: 140px;
+                                padding-top: 140px;
+                                border-radius: 100%;
+                                background-position: center !important;
+                                background-size: cover !important;
+                                background-repeat: no-repeat;
+                            }
+
+                            .item {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+
+
+                                .name {
+                                    color: #C0C0C2;
+                                    font-size: 20px;
+                                }
+
+                                .custom-file-upload {
+                                    position: relative;
+                                    display: inline-block;
+                                    margin-bottom: 20px;
+
+                                    .fileInput {
+                                        display: block;
+                                        width: 100%;
+                                        height: 100%;
+                                        top: 0px;
+                                        opacity: 0;
+                                        position: absolute;
+                                        cursor: pointer;
+                                    }
+
+                                    .title {
+                                        font-size: 30px;
+                                        color: #E1E1E1;
+                                        display: inline-block;
+                                        position: relative;
+                                    }
+
+                                    &:hover {
+                                        .title {
+                                            color: #0087CB;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        button {
+                            border: none;
+                            outline: none;
+                            background-color: #0087CB;
+                            box-shadow: 0 3px 12px #0087CB;
+                            border-radius: 10px;
+                            font-size: 22px;
+                            color: #E1E1E1;
+                            width: 150px;
+                            height: 55px;
+                            transition: 0.3s ease;
+
+                            &:hover {
+                                background: #00CB9B;
+                                box-shadow: 0 1px 20px #00CB9B;
+                            }
+                        }
+                    }
+                }
+
+                .sub-title {
+                    font-size: 30px;
+                    color: #E1E1E1;
+                    margin-bottom: 50px;
+                }
+
+                .change-info {
+                    padding: 60px 35px;
+
+                    form {
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 50px;
+
+                        .group-input {
+                            display: flex;
+                            column-gap: 60px;
+                        }
+
+                        .group {                            
+                            label {
+                                font-size: 30px;
+                                color: #E1E1E1;
+                                margin-bottom: 13px;
+                            }
+
+                            input[type="text"] {
+                                width: 100%;
+                                border: 2px solid #E1E1E1;
+                                border-radius: 10px;
+                                padding: 15px 20px;
+                                font-size: 24px;
+                                background: transparent;
+                                outline: none;
+                                color: #E1E1E1;
+
+                                &::placeholder {
+                                    color: #E1E1E1;
+                                    opacity: 0.7;
+                                }
+
+                                &:focus {
+                                    box-shadow: 0 1px 20px #00CB9B;
+                                }
+                            }
+                        }
+
+                        .update-btn {
+                            border: none;
+                            outline: none;
+                            background-color: #0087CB;
+                            box-shadow: 0 3px 12px #0087CB;
+                            color: #E1E1E1;
+                            font-size: 27px;
+                            padding: 20px 0;
+                            border-radius: 10px;
+
+                            &:hover {
+                                background: #00CB9B;
+                                box-shadow: 0 1px 20px #00CB9B;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+}
+
+@media (max-width: 1600px) {
+    #dashboard-profile {
+        .main-panel {
+            .content {
+                .main-body {
+                    .profile-info {
+                        .personal-profile {
+                            padding: 40px;
+                            row-gap: 50px;
+
+                            .user-main-profile {
+                                .user-photo {
+                                    width: 180px;
+                                    padding-top: 180px;
+                                }
+
+                                .user-name {
+                                    margin-top: 25px;
+                                }
+
+                                .user-email {
+                                    font-size: 16px;
+                                }
+                            }
+
+                            .bottom {
+                                padding-left: 10px;
+                                row-gap: 50px;
+                            }
+
+                            .item {
+                                column-gap: 15px;
+
+                                .info {
+                                    .title {
+                                        font-size: 16px;
+                                    }
+
+                                    .name {
+                                        font-size: 24px;
+                                    }
+                                }
+                            }
+
+                            .rounded-bar {
+                                width: 6px;
+                            }
+                        }
+
+                        .personal-info {
+                            padding: 40px 40px 40px 50px;
+                        }
+                    }
+
+                    .info-update {
+                        .update-photo {
+                            .photo-section {
+                                .user-photo {
+                                    width: 140px;
+                                    padding-top: 140px;
+                                }
+
+                                .item {
+                                    .custom-file-upload {
+                                        .title {
+                                            font-size: 24px;
+                                        }
+                                    }
+                                }
+                            }
+
+                            button {
+                                height: 45px;
+                                width: 120px;
+                                font-size: 20px;
+                            }
+                        }
+                    }
+
+                    .sub-title {
+                        margin-top: -10px;
+                        margin-bottom: 40px;
+                    }
+
+                    .change-info {
+                        padding: 40px 30px;
+
+                        form {
+                            row-gap: 47px;
+
+                            .group-input {
+                                column-gap: 20px;
+                            }
+
+                            .group {
+                                input[type="text"] {
+                                    font-size: 16px;
+                                    padding: 15px;
+                                }
+
+                                label {
+                                    font-size: 24px;
+                                }
+                            }
+                        }
+                    }
+                   
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1200px) {
+    #dashboard-profile {
+        .main-panel {
+            .content {
+                padding: 0 30px 50px 30px;
+
+                .dashboard-header-title {
+                    padding-bottom: 20px;
+                }
+
+                .main-body {
+                    column-gap: 30px;
+
+                    .card-style {
+                        margin-bottom: 30px;
+                    }
+
+                    .profile-info {
+                        .personal-profile {
+                            padding: 30px 20px;
+                            row-gap: 30px;
+
+                            .user-main-profile {
+                                .user-photo {
+                                    width: 140px;
+                                    padding-top: 140px;
+                                }
+
+                                .user-name {
+                                    margin-top: 25px;
+                                }
+
+                                .user-email {
+                                    font-size: 16px;
+                                }
+                            }
+
+                            .bottom {
+                                padding-left: 10px;
+                                row-gap: 50px;
+                            }
+
+                            .item {
+                                column-gap: 10px;
+
+                                .info {
+                                    .title {
+                                        font-size: 14px;
+                                    }
+
+                                    .name {
+                                        font-size: 22px;
+                                    }
+                                }
+                            }
+
+                            .rounded-bar {
+                                width: 6px;
+                            }
+                        }
+
+                        .personal-info {
+                            padding: 30px 20px 30px 30px;
+                        }
+                    }
+
+                    .info-update {
+                        .update-photo {
+                            .photo-section {
+                                .user-photo {
+                                    width: 90px;
+                                    padding-top: 90px;
+                                }
+
+                                .item {
+                                    .custom-file-upload {
+                                        .title {
+                                            font-size: 22px;
+                                        }
+                                    }
+                                }
+                            }
+
+                            button {
+                                height: 45px;
+                                width: 120px;
+                                font-size: 20px;
+                            }
+                        }
+                    }
+
+                    .sub-title {
+                        margin-top: -10px;
+                        margin-bottom: 30px;
+                    }
+
+                    .change-info {
+                        padding: 40px 30px;
+
+                        form {
+                            row-gap: 39px;
+                            
+                            .group-input {
+                                column-gap: 20px;
+                            }
+
+                            .group {
+                                input[type="text"] {
+                                    font-size: 16px;
+                                    padding: 15px;
+                                }
+
+                                label {
+                                    font-size: 24px;
+                                }
+                            }
+                            .update-btn {
+                                padding: 10px 0;
+                                font-size: 22px;
+                            }
+                        }
+                    }
+                   
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 992px) {
+    #dashboard-profile {
+        .main-panel {
+            .content {
+                padding: 0 20px 50px 20px;
+
+                .dashboard-header-title {
+                    padding-bottom: 20px;
+                }
+
+                .main-body {
+                    column-gap: 20px;
+
+                    .card-style {
+                        margin-bottom: 20px;
+                    }
+
+                    .profile-info {
+                        .personal-profile {
+                            padding: 20px 15px;
+                            row-gap: 30px;
+
+                            .user-main-profile {
+                                .user-photo {
+                                    width: 100px;
+                                    padding-top: 100px;
+                                }
+
+                                .user-name {
+                                    margin-top: 20px;
+                                    font-size: 24px;
+                                }
+
+                                .user-email {
+                                    font-size: 14px;
+                                }
+                            }
+
+                            .bottom {
+                                padding-left: 0px;
+                                row-gap: 30px;
+                            }
+
+                            .item {
+                                column-gap: 10px;
+
+                                .info {
+                                    .title {
+                                        font-size: 13px;
+                                    }
+
+                                    .name {
+                                        font-size: 18px;
+                                    }
+                                }
+                            }
+
+                            .rounded-bar {
+                                width: 4px;
+                            }
+                        }
+
+                        .personal-info {
+                            padding: 20px 15px;
+
+                            .card-title {
+                                font-size: 23px;
+                            }
+
+                            .item {
+                                display: flex;
+                                align-items: center;
+
+                                img {
+                                    width: 40px;
+                                    height: 40px;
+                                }
+
+                                .info {
+                                    .title {
+                                        font-size: 18px;
+                                    }
+
+                                    .value {
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .info-update {
+                        .update-photo {
+                            padding: 20px 15px;
+
+                            .photo-section {
+                                column-gap: 10px;
+                                
+                                .user-photo {
+                                    width: 50px;
+                                    padding-top: 50px;
+                                }
+
+                                .item {
+                                    .custom-file-upload {
+                                        margin-bottom: 0px;
+
+                                        .title {
+                                            font-size: 18px;
+                                        }
+                                    }
+
+                                    .name {
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+
+                            button {
+                                height: 40px;
+                                width: 100px;
+                                font-size: 16px;
+                            }
+                        }
+                    }
+
+                    .sub-title {
+                        font-size: 24px;
+                        margin-bottom: 20px;
+                    }
+
+                    .change-info {
+                        padding: 20px 15px;
+
+                        form {
+                            row-gap: 39px;
+                            
+                            .group-input {
+                                column-gap: 15px;
+                            }
+
+                            .group {
+                                input[type="text"] {
+                                    font-size: 14px;
+                                    padding: 15px;
+                                }
+
+                                label {
+                                    font-size: 20px;
+                                }
+                            }
+                            .update-btn {
+                                padding: 10px 0;
+                                font-size: 22px;
+                            }
+                        }
+                    }
+                   
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    #dashboard-profile {
+        .main-panel {
+            .content {
+                margin-top: -50px;
+                padding: 0 35px 50px 35px;
+
+                .dashboard-header-title {
+                    font-size: 28px;
+                    padding-bottom: 20px;
+                }
+
+                .main-body {
+                    column-gap: 20px;
+
+                    .card-style {
+                        margin-bottom: 20px;
+                    }
+
+                    .profile-info {
+                        .personal-profile {
+                            padding: 20px 15px;
+                            row-gap: 30px;
+
+                            .user-main-profile {
+                                .user-photo {
+                                    width: 100px;
+                                    padding-top: 100px;
+                                }
+
+                                .user-name {
+                                    margin-top: 20px;
+                                    font-size: 24px;
+                                }
+
+                                .user-email {
+                                    font-size: 14px;
+                                }
+                            }
+
+                            .bottom {
+                                padding-left: 0px;
+                                row-gap: 30px;
+                            }
+
+                            .item {
+                                column-gap: 10px;
+                                width: 100%;
+                                padding-left: 25%;
+
+                                .info {
+                                    .title {
+                                        font-size: 13px;
+                                    }
+
+                                    .name {
+                                        font-size: 18px;
+                                    }
+                                }
+                            }
+
+                            .rounded-bar {
+                                width: 4px;
+                            }
+                        }
+
+                        .personal-info {
+                            padding: 20px 15px;
+                            row-gap: 30px;
+
+                            .card-title {
+                                font-size: 23px;
+                            }
+
+                            .item {
+                                display: flex;
+                                align-items: center;
+
+                                img {
+                                    width: 40px;
+                                    height: 40px;
+                                }
+
+                                .info {
+                                    .title {
+                                        font-size: 18px;
+                                    }
+
+                                    .value {
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .info-update {
+                        .update-photo {
+                            padding: 20px 15px;
+
+                            .photo-section {
+                                column-gap: 10px;
+                                
+                                .user-photo {
+                                    width: 50px;
+                                    padding-top: 50px;
+                                }
+
+                                .item {
+                                    .custom-file-upload {
+                                        margin-bottom: 0px;
+
+                                        .title {
+                                            font-size: 18px;
+                                        }
+                                    }
+
+                                    .name {
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+
+                            button {
+                                height: 40px;
+                                width: 100px;
+                                font-size: 16px;
+                            }
+                        }
+                    }
+
+                    .sub-title {
+                        font-size: 24px;
+                        margin-bottom: 20px;
+                    }
+
+                    .change-info {
+                        padding: 20px 15px;
+
+                        form {
+                            row-gap: 25px;
+                            
+                            .group-input {
+                                column-gap: 25px;
+                                flex-direction: column;
+                                row-gap: 15px;
+                            }
+
+                            .group {
+                                input[type="text"] {
+                                    font-size: 14px;
+                                    padding: 10px;
+                                }
+
+                                label {
+                                    font-size: 16px;
+                                }
+                            }
+                            .update-btn {
+                                padding: 10px 0;
+                                font-size: 22px;
+                            }
+                        }
+                    }
+                   
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    #dashboard-profile {
+        .main-panel {
+            .content {
+                width: 93vw;
+                margin: 0 auto;
+                padding: 0px;
+
+                .main-body {
+                    flex-direction: column;
+
+                    .profile-info {
+                        width: 100%;
+
+                        .personal-profile {
+                            .item {
+                                padding-left: 30%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+

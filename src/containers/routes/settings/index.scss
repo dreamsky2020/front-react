@@ -1,0 +1,223 @@
+#dashboard-settings {
+    .main-panel {
+        .content {
+            flex: 1;
+            min-height: calc(100vh - 173px);
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/general/black-texture-background-1080P-wallpaper-middle-size.png) fixed center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding-left: 60px;
+            padding-right: 60px;
+            padding-bottom: 60px;
+
+            .top-notification {
+                display: flex;
+                align-items: center;
+                background-color: #0087CB;
+                margin-top: -50px;
+                padding: 20px;
+
+                .note {
+                    flex: 1;
+                    font-size: 26px;
+                    color: #E1E1E1;
+                    text-align: center;
+                }
+
+                .feature {
+                    display: flex;
+                    width: 260px;
+                    justify-content: space-between;
+
+                    .social-links {
+                        display: flex;
+                        align-items: center;
+                        column-gap: 25px;
+
+                        a {
+                            display: grid;
+                            place-items: center;
+                            width: 33px;
+                            height: 27px;
+                            color: white;
+                            border-radius: 5px;
+                            text-decoration: none;
+
+                            &:first-child {
+                                background: #FF0000;
+                                box-shadow: 0 3px 13px #FF0000;
+
+                                &:hover {
+                                    background: white;
+                                    color: #FF0000;
+                                    box-shadow: none;
+                                    box-shadow: 0 3px 13px #fff;
+                                }
+                            }
+
+                            &:nth-child(2) {
+                                background: #54C6FF;
+                                box-shadow: 0 3px 13px #54C6FF;
+
+                                &:hover {
+                                    background: white;
+                                    color: #54C6FF;
+                                    box-shadow: none;
+                                    box-shadow: 0 3px 13px #fff;
+                                }
+                            }
+
+                            &:last-child {
+                                background: #004C88;
+                                box-shadow: 0 3px 13px #004C88;
+
+                                &:hover {
+                                    background: white;
+                                    color: #004C88;
+                                    box-shadow: none;
+                                    box-shadow: 0 3px 13px #fff;
+                                }
+                            }
+                        }
+                    }
+
+                    .close-btn {
+                        border: none;
+                        outline: none;
+                        background: transparent;
+                        color: white;
+                        font-size: 25px;
+
+                        &:hover {
+                            color: #FF0000;
+                            opacity: 0.8;
+                        }
+                    }
+                }
+            }
+
+            .page-title {
+                font-size: 40px;
+                color: #E1E1E1;
+                padding: 20px 0;
+            }
+
+            .main-body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                row-gap: 40px;
+                padding-top: 20px;
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 1200px){
+    #dashboard-settings {
+        .main-panel {
+            .content {
+                .top-notification {
+                    padding: 15px;
+
+                    .note {
+                        font-size: 20px;
+                    }
+
+                    .feature {
+                        width: 220px;
+
+                        .social-links {
+                            a {
+                                width: 25px;
+                                height: 21px;
+
+                                i {
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+
+                        .close-btn {
+                            font-size: 18px;
+                        }
+                    }
+                }
+
+                .page-title {
+                    font-size: 32px;
+                }
+
+                .main-body {
+                    row-gap: 25px;
+                    padding-top: 10px
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px){
+    #dashboard-settings {
+        .main-panel {
+            .content {
+                padding-left: 30px;
+                padding-right: 30px;
+
+                .top-notification {
+                    .note {
+                        font-size: 16px;
+                    }
+
+                    .feature {
+                        width: 180px;
+
+                        .social-links {
+                            column-gap: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575px){
+    #dashboard-settings {
+        .main-panel {
+            .content {
+                width: 93vw;
+                margin: 0 auto;
+                padding: 0px;
+
+                .top-notification {
+                    margin-top: -20px;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    row-gap: 10px;
+
+                    .note {
+                        width: 100%;
+                        text-align: left;
+                        font-size: 14px;
+                    }
+
+                    .feature {
+                        width: 100%;
+                    }
+                }
+
+                .page-title {
+                    font-size: 24px;
+                    padding-bottom: 10px;
+                }
+
+                .main-body {
+                    row-gap: 15px;
+                }
+            }
+        }
+    }
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import {withRouter, Link} from 'react-router-dom'
+import {TweenMax} from 'gsap'
 import './index.scss'
 
 class SidebarMenu extends React.Component {
@@ -26,20 +27,25 @@ class SidebarMenu extends React.Component {
         }
 
         this.handleResize();
-        window.addEventListener('resize', this.handleResize)
+        window.addEventListener('resize', this.handleResize);
     }
 
     closeMobileMenu() {
-        document.getElementById("sidebar-menu").style.display = "none";
+        let sideBar = document.getElementById("sidebar-menu");
+        TweenMax.to(sideBar, .5, {css: {marginLeft: '-200px'}})
+        TweenMax.to(sideBar, .5, {css: {visibility: 'hidden'}})
+
     }
 
     handleResize = () => {
         if(window.innerWidth > 768) {
-            document.getElementById("sidebar-menu").style.display = "flex";
+            document.getElementById("sidebar-menu").style.visibility = "visible";
+            document.getElementById("sidebar-menu").style.marginLeft = "0px";
         }
 
         else {
-            document.getElementById("sidebar-menu").style.display = "none";
+            document.getElementById("sidebar-menu").style.visibility = "hidden";
+            document.getElementById("sidebar-menu").style.marginLeft = "-200px";
         }
     } 
     
@@ -71,7 +77,7 @@ class SidebarMenu extends React.Component {
                             </Link>
                         </li>
                         <li>
-                            <Link to="/" className="nav-item">
+                            <Link to="/learning-process" className="nav-item">
                                 <img src="./img/icons/bar-chart.svg" alt="bar chart" />
                             </Link>
                         </li>
@@ -81,8 +87,13 @@ class SidebarMenu extends React.Component {
                             </Link>
                         </li>
                         <li>
-                            <Link to="/" className="nav-item">
+                            <Link to="/main-awards" className="nav-item">
                                 <img src="./img/icons/bar-clock.svg" alt="bar clock" />
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/profile" className="nav-item">
+                                <img src="./img/icons/user.svg" alt="user profile" />
                             </Link>
                         </li>
                         <li>
@@ -91,7 +102,7 @@ class SidebarMenu extends React.Component {
                             </Link>
                         </li>
                         <li>
-                            <Link to="/" className="nav-item">
+                            <Link to="/settings" className="nav-item">
                                 <img src="./img/icons/settings.svg" alt="setting" />
                             </Link>
                         </li>
