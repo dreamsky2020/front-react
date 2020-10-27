@@ -82,7 +82,7 @@ class SidebarMenu extends React.Component {
                             </Link>
                         </li>
                         <li>
-                            <Link to="/" className="nav-item">
+                            <Link to="/main-records" className="nav-item">
                                 <img src="./img/icons/Trophy.svg" alt="tyophy" />
                             </Link>
                         </li>
@@ -97,7 +97,7 @@ class SidebarMenu extends React.Component {
                             </Link>
                         </li>
                         <li>
-                            <Link to="/" className="nav-item">
+                            <Link to="/main-rank" className="nav-item">
                                 <img src="./img/icons/league.svg" alt="league" />
                             </Link>
                         </li>

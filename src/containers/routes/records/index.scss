@@ -27,6 +27,7 @@
                     .item {
                         display: flex;
                         column-gap: 20px;
+                        align-items: center;
 
                         &:first-child {
                             .img-section {
@@ -316,10 +317,7 @@
                                             text-transform: uppercase;
                                             font-size: 18px;
                                             padding: 40px 0;
-
-                                            &:first-child {
-                                                text-align: left;
-                                            }
+                                            text-align: center;
                                         }
                                     }
                                 }
@@ -327,7 +325,7 @@
                                 tbody {
                                     tr {
                                         td {
-                                            text-align: left;
+                                            text-align: center;
                                             padding: 15px 0;
                                             padding-left: 15px;
                                         }
@@ -365,6 +363,7 @@
                                             .success {
                                                 display: flex;
                                                 align-items: center;
+                                                justify-content: center;
                                                 column-gap: 15px;
                                                 color: #56DB15;
 
@@ -393,6 +392,7 @@
                                             .warning {
                                                 display: flex;
                                                 align-items: center;
+                                                justify-content: center;
                                                 column-gap: 15px;
                                                 color: #CD0000;
 
@@ -571,8 +571,8 @@
                         }
     
                         .bottom-section {
-                            padding: 20px 25px;
-                            padding-bottom: 0px;
+                            padding: 40px 25px;
+
                             .header {
                                 .title {
                                     font-size: 18px;
@@ -624,7 +624,6 @@
                                         tr {
                                             td {
                                                 padding: 10px 0;
-                                                padding-left: 10px;
                                             }
                                         }
     
@@ -701,7 +700,7 @@
                         .section-container {
                             width: 100%;
                             padding: 20px 15px;
-                            padding-bottom: 0px;
+                            padding-bottom: 10px;
                         }
                     }
                 }
