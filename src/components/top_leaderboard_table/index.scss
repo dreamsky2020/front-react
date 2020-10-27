@@ -1,0 +1,167 @@
+#leader-table-container {
+    padding-bottom: 30px;
+
+    table {
+        width: 100%;
+        color: #E1E1E1;
+        border-collapse: collapse;
+
+        thead {
+            tr {
+                background-color: #0B0B13;
+
+                th {
+                    text-transform: uppercase;
+                    font-size: 16px;
+                    padding: 30px 0;
+                    text-align: center;
+
+                    &:first-child {
+                        text-align: left;
+                        padding-left: 5px;
+                    }
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+                    padding: 10px 0;
+                }
+            }
+
+            .contained-tr {
+                td {
+                    text-align: center;
+                    padding: 20px 0;
+                    padding-left: 15px;
+                    background: #12131F;
+                    border-top: 1px solid #707070;
+                    border-bottom: 1px solid #707070;
+                    font-size: 16px;
+
+                    &:first-child {
+                        text-align: left;
+                        border-left: 1px solid #707070;
+                        padding-left: 20px;
+
+                        img {
+                            width: 18px;
+                            margin-right: 10px;
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        color: #56DB15;
+
+                        div {
+                            width: 50px;
+                            height: 40px;
+                            display: inline-block;
+                            background: radial-gradient(#25311f, transparent);
+                            border-radius: 100%;
+                            padding: 10px;
+                        }
+                    }
+
+                    &:nth-child(4) {
+                        color: #FF0000;
+
+                        div {
+                            width: 50px;
+                            height: 40px;
+                            display: inline-block;
+                            background: radial-gradient(#311f1f, transparent);
+                            border-radius: 100%;
+                            padding: 10px;
+                        }
+                    }
+
+                    &:last-child {
+                        border-right: 1px solid #707070;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    #leader-table-container {
+        table {
+            thead {
+                tr {
+                    th {
+                        font-size: 14px;
+                        padding: 20px 0;
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td {
+                        font-size: 12px;
+                    }
+                }
+
+                .contained-tr {
+                    td {
+                        padding: 10px 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    #leader-table-container {
+        width: 100%;
+        overflow-x: scroll;
+
+        table {
+            min-width: 600px;
+
+            thead {
+                tr {
+                    th {
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            tbody {
+                tr {
+                    td {
+                        padding: 5px 0;
+                    }
+                }
+
+                .contained-tr {
+                    td {
+                        font-size: 12px;
+                        padding: 10px 0;
+
+                        &:first-child {
+                            img {
+                                width: 15px;
+                            }
+                        }
+
+                        &:nth-child(3),
+                        &:nth-child(4) {
+                            div {
+                                width: 40px;
+                                height: 35px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

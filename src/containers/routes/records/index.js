@@ -313,13 +313,12 @@ export class index extends Component {
                                             <AwardCard />
                                             <AwardCard />
                                             <AwardCard />
-                                            <AwardCard />
                                         </div>
                                         }
 
                                         {ranksOpen && 
                                         <div>
-                                            <RankTable />
+                                            <RankTable header={true}/>
                                         </div>
                                         }
                                     </div>

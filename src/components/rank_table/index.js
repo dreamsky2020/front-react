@@ -7,11 +7,13 @@ export class index extends Component {
     render() {
         return (
             <div className="table-scroll-container">
-                <div className="header">
-                    <p className="title">
-                        highest Number of message
-                    </p>
-                </div>
+                {this.props.header &&
+                    <div className="header">
+                        <p className="title">
+                            highest Number of message
+                        </p>
+                    </div>
+                }
                 <table className="language-rank-table">
                     <thead>
                         <tr>
@@ -38,7 +40,13 @@ export class index extends Component {
                             </td>
                             <td>Mentor</td>
                             <td>200</td>
-                            <td><Link to="/">See top 50</Link></td>
+                            <td>
+                                {this.props.tournament ? 
+                                    (<Link to="/tournament-result">View Results</Link>)
+                                    :
+                                    (<Link to="/">See top 50</Link>)
+                                }
+                            </td>
                         </tr>
                         <tr className="empty-tr">
                             <td></td>
@@ -62,7 +70,13 @@ export class index extends Component {
                             </td>
                             <td>Guru</td>
                             <td>200</td>
-                            <td><Link to="/">See top 50</Link></td>
+                            <td>
+                                {this.props.tournament ? 
+                                    (<Link to="/tournament-result">View Results</Link>)
+                                    :
+                                    (<Link to="/">See top 50</Link>)
+                                }
+                            </td>
                         </tr>
                         <tr className="empty-tr">
                             <td></td>
@@ -86,7 +100,13 @@ export class index extends Component {
                             </td>
                             <td>Mentor</td>
                             <td>200</td>
-                            <td><Link to="/">See top 50</Link></td>
+                            <td>
+                                {this.props.tournament ? 
+                                    (<Link to="/tournament-result">View Results</Link>)
+                                    :
+                                    (<Link to="/">See top 50</Link>)
+                                }
+                            </td>
                         </tr>      
                         <tr className="empty-tr">
                             <td></td>
@@ -110,7 +130,13 @@ export class index extends Component {
                             </td>
                             <td>Guru</td>
                             <td>200</td>
-                            <td><Link to="/">See top 50</Link></td>
+                            <td>
+                                {this.props.tournament ? 
+                                    (<Link to="/tournament-result">View Results</Link>)
+                                    :
+                                    (<Link to="/">See top 50</Link>)
+                                }
+                            </td>
                         </tr>
                         <tr className="empty-tr">
                             <td></td>
@@ -134,7 +160,13 @@ export class index extends Component {
                             </td>
                             <td>Mentor</td>
                             <td>200</td>
-                            <td><Link to="/">See top 50</Link></td>
+                            <td>
+                                {this.props.tournament ? 
+                                    (<Link to="/tournament-result">View Results</Link>)
+                                    :
+                                    (<Link to="/">See top 50</Link>)
+                                }
+                            </td>
                         </tr>      
                         <tr className="empty-tr">
                             <td></td>
@@ -158,7 +190,13 @@ export class index extends Component {
                             </td>
                             <td>Guru</td>
                             <td>200</td>
-                            <td><Link to="/">See top 50</Link></td>
+                            <td>
+                                {this.props.tournament ? 
+                                    (<Link to="/tournament-result">View Results</Link>)
+                                    :
+                                    (<Link to="/">See top 50</Link>)
+                                }
+                            </td>
                         </tr>
                         
                     </tbody>
