@@ -4,7 +4,7 @@ import SidebarMenu from 'components/sidebar'
 import Header from 'components/dashboard_header'
 import Footer from 'components/dashboard_footer'
 import AwardCard from 'components/award_card'
-import TinyChart from 'components/tiny_line_chart'
+import TinyChart from 'components/tinyLineChart'
 import './index.scss'
 
 import { 
@@ -170,15 +170,6 @@ export class index extends Component {
     }
 
     componentDidMount() {
-        var menus = document.getElementsByClassName("nav-item");
-        for(let i=0; i<menus.length; i++) {
-            if(menus[i].classList.contains('active')) {
-                menus[i].classList.remove('active');
-            }
-        }
-        menus[3].classList.add("active");
-
-
         $(".dropdown").click(function(){
             $(this).next(".menu").toggleClass("showSelectMenu");
 
@@ -189,8 +180,10 @@ export class index extends Component {
         });
     }
 
+
     render() {
         
+
         return (
             <div id="dashboard-main-awards">
                 <div className="route-wrapper">
