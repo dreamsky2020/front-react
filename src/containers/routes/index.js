@@ -8,7 +8,13 @@ import {
 } from 'store/actions/auth';
 
 const Records = loadable(() => import('./records'))
+const MainAwards = loadable(() => import('./main_awards'))
+const LearningProcess = loadable(() => import('./learning_process'))
+const Profile = loadable(() => import('./profile'))
+const Settings = loadable(() => import('./settings'))
 const Page404 = loadable(() => import('./page404'))
+
+
 
 
 class Routes extends React.Component {
@@ -18,7 +24,13 @@ class Routes extends React.Component {
         return (
             <Switch>
                 <Route exact path='/' component={Records}/>
-                <Route path='/404' component={Page404}/>
+                <Route exact path='/main-awards' component={MainAwards}/>
+                <Route exact path='/learning-process' component={LearningProcess}/>
+                <Route exact path='/profile' component={Profile}/>
+                <Route exact path='/settings' component={Settings}/>
+
+
+                <Route component={Page404}/>
             </Switch>
         );
     }

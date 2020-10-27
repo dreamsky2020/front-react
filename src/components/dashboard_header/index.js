@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { withRouter, Link } from 'react-router-dom'
+import {TweenMax} from 'gsap'
 import './index.scss'
 
 
@@ -13,6 +14,11 @@ export class index extends Component {
 
         this.handleClick = this.handleClick.bind(this);
         this.showMobileMenu = this.showMobileMenu.bind(this);
+        this.handleChangeSetting = this.handleChangeSetting.bind(this);
+    }
+
+    componentWillUnmount(){
+        document.removeEventListener('click', this.handleOutsideClick, false);
     }
 
     handleClick() {
@@ -35,7 +41,13 @@ export class index extends Component {
     }
 
     showMobileMenu() {
-        document.getElementById("sidebar-menu").style.display = "flex";
+        let sideBar = document.getElementById("sidebar-menu")
+        TweenMax.to(sideBar, .5, {css: {visibility: 'visible'}})
+        TweenMax.to(sideBar, .5, {css: {marginLeft: '0px'}})
+    }
+
+    handleChangeSetting(setting) {
+        this.props.history.push(`${'/' + setting}`);
     }
 
     render() {
@@ -43,8 +55,12 @@ export class index extends Component {
         return (
             <div id="dashboard-header">
                 <div className="search-section">
-                    <input type="text" placeholder="once done then it will appear in the saved dashboards page." />
-                    <button className="">Announcement</button>
+                {this.props.searchBar &&
+                    <>
+                        <input type="text" placeholder="once done then it will appear in the saved dashboards page." />
+                        <button className="">Announcement</button>
+                    </>
+                }
                 </div>
                 <div className="right-section">
                     
@@ -78,7 +94,7 @@ export class index extends Component {
 
                                 {settingItemOpen &&
                                 <div className="items">
-                                    <div className="item">Edit Profile</div>
+                                    <div className="item" onClick={() => this.handleChangeSetting('profile')}>Edit Profile</div>
                                     <div className="item">Delete Account</div>
                                     <div className="item">Logout</div>
                                 </div>

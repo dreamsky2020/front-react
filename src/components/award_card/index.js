@@ -21,7 +21,6 @@ export class index extends Component {
                             it was my cheerful duty to attend upon him while taking that hard-scrabble scramble upon the dead whale's back. 
                             You have seen Italian organ-boys holding a dancing-ape by a long cord.Being the savage's bowsman, 
                             that is, the person who pulled the bow-oar in his boat (the second one from forward), 
-                            it was my cheerful duty to attend upon him while taking that hard-scrabble scramble upon the dead whale's back. 
                             You have seen Italian organ-boys holding a dancing-ape by a long cord…Learn more
                         </p>
                     </div>

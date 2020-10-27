@@ -1,0 +1,750 @@
+#dashboard-main-awards {
+    .main-panel {
+        .content {
+            flex: 1;
+            min-height: calc(100vh - 173px);
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/general/black-texture-background-1080P-wallpaper-middle-size.png) fixed center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 0 40px 40px 40px;
+
+            .page-title {
+                font-size: 40px;
+                color: #E1E1E1;
+            }
+
+            .select-group {
+                display: flex;
+                flex-wrap: wrap;
+                column-gap: 100px;
+                padding: 60px 0;
+
+                p {
+                    color: #8A88B7;
+                }
+            }
+
+            .result-group {
+                display: flex;
+                justify-content: space-between;
+
+                .card {
+                    width: 25%;
+                    background: #151423;
+                    box-shadow: 0px 28px 45px #00000029;
+                    border: 1px solid #707070;
+                    border-radius: 10px;
+                    padding: 20px 0;
+
+                    &:after {
+                        content: "";
+                        width: 5px;
+                        height: 100%;
+                        border: 7px solid transparent;
+                        position: absolute;
+                        border-radius: 10px;
+                        top: 0px;
+                        left: -1px;
+                    }
+
+                    &:first-child {
+                        &:after {
+                            border-color:#FF0000;
+                            box-shadow: 0 3px 6px #FF0000;
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        &::after {
+                            border-color: #6B54E3;
+                            box-shadow: 0 3px 6px #6B54E3;
+                        }
+                    }
+
+                    &:last-child {
+                        &::after {
+                            border-color: #54C6FF;
+                            box-shadow: 0 3px 6px #54c6ff;
+                        }
+                    }
+                    
+                    .card-title {
+                        color: #fff;
+                        font-size: 24px;
+                        text-align: center;
+                        padding: 0px;
+                        margin-bottom: 0px;
+                    }
+
+                    .card-body {
+                        color: #FFFFFF;
+                        opacity: 0.6;
+                        font-size: 50px;
+                        text-align: center;
+                        padding: 0px;
+                    }
+                }
+            }
+
+            .main-body {
+                display:  flex;
+                column-gap: 20px;
+                padding-top: 60px;
+
+                .line-chart-area {
+                    width: 59vw;
+
+                    .awards-won-chart {
+                        background-color: #12131F;
+                        padding: 40px;
+                        border-radius: 10px;
+                        width: 100%;
+                        position: relative;
+
+                        .chart-header {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding-bottom: 20px;
+
+                            .title {
+                                color: #fff;
+                                font-size: 24px;
+                            }
+
+                            .chart-labels {
+                                display: flex;
+                                column-gap: 30px;
+
+                                p {
+                                    color: #67758D;
+                                    font-size: 14px;
+                                    position: relative;
+                                    padding: 0 10px;
+
+                                    &:first-child {
+                                        &::after {
+                                            content: "";
+                                            width: 10px;
+                                            height: 10px;
+                                            background: #54c6ff;
+                                            box-shadow: 0 1px 6px #54c6ff;
+                                            position: absolute;
+                                            border-radius: 10px;
+                                            top: 5px;
+                                            left: -10px;
+                                        }
+                                    }
+
+                                    &:last-child {
+                                        &::after {
+                                            content: "";
+                                            width: 10px;
+                                            height: 10px;
+                                            background: #9D60FB;
+                                            box-shadow: 0 1px 6px #9D60FB;
+                                            position: absolute;
+                                            border-radius: 10px;
+                                            top: 5px;
+                                            left: -10px;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .more-btn {
+                                border: none;
+                                outline: none;
+                                background-color: transparent;
+                                color: white;
+                                cursor: pointer;
+                            }
+                        }
+
+                        .chartjs-render-monitor {
+                            max-height: 360px !important;
+                        }
+
+                    }
+
+                    .award-body {
+                        background-color: #010412;
+                        padding: 40px;
+                        margin-top: 20px;
+                        border-radius: 10px;
+
+                        .title {
+                            color: #fff;
+                            font-size: 24px;
+                            padding-bottom: 20px;
+                        }
+
+                        .award-items {
+                            max-height: 500px;
+                            overflow-y: scroll;
+                            margin-right: -20px;
+
+                            &::-webkit-scrollbar {
+                                width: 14px;      
+                            }
+                            
+                            &::-webkit-scrollbar-track {
+                                box-shadow: inset 0 0 5px #0087CB; 
+                                border-radius: 10px;
+                            }
+                            
+                            &::-webkit-scrollbar-thumb {
+                                background: #0087CB; 
+                                border-radius: 10px;
+                            }
+                            
+                            &::-webkit-scrollbar-thumb:hover {
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+
+                .rate-progress-area {
+                    flex: 1;
+                    .rate-area {
+                        padding: 40px 20px;
+                        background-color: #12131F;
+                        border-radius: 10px;
+
+                        .area-header {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            .title {
+                                color: white;
+                                text-transform: uppercase;
+                            }
+
+                            .select-dropholder {
+                                width: 100px;
+                                height: 38px;
+
+                                .dropdown {
+                                    p {
+                                        color: #fff;
+                                        font-size: 16px;
+                                        font-size: 14px;
+                                    } 
+                                    
+                                    &::after {
+                                        border: 5px solid transparent;
+                                        border-color: #54c6ff transparent transparent transparent;
+                                        top: 17px;
+                                        right: 15px;
+                                    }
+                                }
+                                
+                                .menu {
+                                    top: 44px;
+
+                                    li {
+                                        padding: 7px 10px;
+                                    }
+                                }
+                            }
+                        }
+
+                        .result-value {
+                            display: flex;
+                            justify-content: space-around;
+                            padding: 40px 0;
+
+                            div {
+                                .big-text {
+                                    color: #fff;
+                                    font-size: 50px;
+                                    text-align: center;
+                                }
+
+                                .small-text {
+                                    color: #fff;
+                                    opacity: 0.6;
+                                    font-size: 16px;
+                                    text-align: center;
+                                }
+                            }
+                        }
+
+                        .star-rate {
+                            position: relative;
+                            width: 100%;
+
+                            .doughnut-container {
+                                position: relative;
+                                transform: translateX(-40px);
+                                width: 25vw;
+
+                                .pie-container {
+                                    width: 30%;
+                                    height: 30%;
+                                    top: 50%;
+                                    left: 50%;
+                                    position: absolute;
+                                    transform: translate(-50%, -50%);
+                                }
+                            }
+
+                            .star-container {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-evenly;
+                                position: absolute;
+                                height: 100%;
+                                top: 0px;
+                                right: 20px;
+
+                                .item {
+                                    i{
+                                        font-size: 12px;
+                                    }
+
+                                    &:first-child {
+                                        i {
+                                            color: #8479FF;
+                                        }
+                                    }
+
+                                    &:nth-child(2) {
+                                        i {
+                                            color: #FFC935;
+                                        }
+                                    }
+
+                                    &:nth-child(3) {
+                                        i {
+                                            color: #FF6161;
+                                        }
+                                    }
+
+                                    &:nth-child(4) {
+                                        i {
+                                            color: #BF5BFF;
+                                        }
+                                    }
+
+                                    &:last-child {
+                                        i {
+                                            color: #58D0FF;
+                                        }
+                                    }
+
+
+                                    span {
+                                        color: white;
+                                        font-size: 12px;
+                                        margin-left: 5px;
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+
+                    .progress-area {
+                        padding: 30px 20px;
+                        background-color: #12131F;
+                        border-radius: 10px;
+                        margin-top: 30px;
+
+                        .header {
+                            display: flex;
+                            justify-content: space-between;
+                            padding-bottom: 10px;
+
+                            p {
+                                color: white;
+                                font-size: 16px;
+                            }
+
+                            .progress-select-group {
+                                display: flex;
+                                column-gap: 15px;
+
+                                .select-dropholder {
+                                    width: 80px;
+                                    height: 28px;
+
+                                    .dropdown {
+                                        border-radius: 5px;
+                                        padding-left: 5px;
+
+                                        &::after {
+                                            content: "";
+                                            width: 0;
+                                            height: 0;
+                                            border: 4px solid transparent;
+                                            border-color: #54c6ff transparent transparent transparent;
+                                            position: absolute;
+                                            top: 10px;
+                                            right: 5px;
+                                        }
+                                    }
+
+                                    p {
+                                        font-size: 12px;
+                                    }
+
+                                    .menu {
+                                        font-size: 12px;
+                                        top: 35px;
+
+                                        li {
+                                            padding: 7px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .last-update {
+                            font-size: 10px;
+                            color: #fff;
+                            opacity: 0.6;
+                        }
+
+                        .progress-chart-area {
+                            table {
+                                width: 100%;
+                                color: white;
+                                font-size: 16px;
+
+                                tbody {
+                                    tr {
+                                        td {
+                                            padding: 10px 0;
+                                            font-size: 12px;
+
+                                            &:last-child {
+                                                display: flex;
+                                                column-gap: 10px;
+                                                font-size: 10px;
+                                                justify-content: flex-end;
+                                                align-items: center;
+                                                padding: 16px 0;
+
+                                                .rounded-icon {
+                                                    width: 18px;
+                                                    height: 18px;
+                                                    border-radius: 100%;
+                                                    display: grid;
+                                                    place-items: center;
+
+                                                    i {
+                                                        color: white;
+                                                        font-size: 12px;
+                                                    }
+                                                }
+                                            }
+
+                                            &:nth-child(3) {
+                                                text-align: center;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1500px ) {
+    #dashboard-main-awards {
+        .main-panel {
+            .content {
+                padding: 0 25px 25px 25px;
+
+                .result-group {
+                    .card {
+                        .card-title {
+                            font-size: 20px;
+                        }
+                    }
+                }
+
+                .main-body {
+                    .line-chart-area {
+                        width: 54vw;
+
+                        .awards-won-chart {
+                            .chartjs-render-monitor {
+                                height: 290px !important;
+                            }
+                        }
+                    }
+
+                    .rate-progress-area {
+                        .rate-area {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            height: 430px;
+
+                            .result-value {
+                                padding: 0px;
+                            }
+
+                            .star-rate {
+                                .doughnut-container {
+                                    width: 23vw;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px ) {
+    #dashboard-main-awards {
+        .main-panel {
+            .content {
+                .page-title {
+                    font-size: 32px;
+                }
+
+                .select-group {
+                    padding: 40px 0;
+
+                    .select-dropholder {
+                        height: 50px;
+                        width: 280px;
+
+                        .dropdown {
+                            &::after {
+                                top: 21px;
+                            }
+                        }
+
+                        .menu {
+                            top: 57px;
+                        }
+                    }
+                }
+
+                .result-group {
+                    .card {
+                        &::after {
+                            border: 5px solid transparent;
+                        }
+
+                        .card-title {
+                            font-size: 16px;
+                        }
+
+                        .card-body {
+                            font-size: 32px;
+                        }
+                    }
+                }
+
+                .main-body {
+                    padding-top: 40px;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 992px ) {
+    #dashboard-main-awards {
+        .main-panel {
+            .content {
+                .select-group {
+                    column-gap: unset;
+                    justify-content: space-between;
+
+                    .select-dropholder {
+                        width: 250px;
+                    }
+                }
+
+                .main-body {
+                    flex-direction: column;
+                    row-gap: 20px;
+
+                    .line-chart-area {
+                        width: 84vw;
+
+                        .awards-won-chart {
+                            .chartjs-render-monitor {
+                                height: unset !important;
+                            }
+                        }
+
+                        .award-body {
+                            
+                            .award-items {
+                                margin-right: 0px;
+
+                                &::-webkit-scrollbar {
+                                    width: 0px;      
+                                }
+                            }
+                        }
+                    }
+
+                    .rate-progress-area {
+                        .rate-area {
+                            height: unset;
+                            padding: 40px;
+
+                            .result-value {
+                                padding: 20px 0;
+                            }
+
+                            .star-rate {
+                                .doughnut-container {
+                                    width: 50vw;
+                                }
+                            }
+                        }
+
+                        .progress-area {
+                            padding: 40px;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px ) {
+    #dashboard-main-awards {
+        .main-panel {
+            .content {
+                padding: 0 35px;
+
+                .main-body {
+                    .line-chart-area {
+                        width: 90vw;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575px ) {
+    #dashboard-main-awards {
+        .main-panel {
+            .content {
+                width: 93vw;
+                padding: 0px;
+                margin: 0 auto;
+
+                .page-title {
+                    font-size: 24px;
+                }
+
+                .select-group {
+                    padding: 20px 0;
+
+                    .select-dropholder {
+                        width: 160px;
+                        height: 45px;
+
+                        .dropdown {
+                            padding-left: 10px;
+
+                            &::after {
+                                top: 19px;
+                                border: 5px solid transparent;
+                                border-color: #54c6ff transparent transparent transparent;
+                            }
+
+                            p {
+                                font-size: 14px;
+                            }
+                        }
+
+                        .menu {
+                            top: 50px;
+
+                            li {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+
+                .result-group {
+                    flex-direction: column;
+                    row-gap: 10px;
+
+                    .card {
+                        width: 100%;
+                        border-radius: 5px;
+
+                        &::after {
+                            border: 2px solid transparent;
+                            width: 2px;
+                        }
+
+                        .card-title {
+                            font-size: 18px;
+                        }
+                    }
+                }
+
+                .main-body {
+                    .line-chart-area {
+                        width: 100%;
+
+                        .awards-won-chart {
+                            padding: 10px;
+
+                            .chart-header {
+                                flex-wrap: wrap;
+                                row-gap: 10px;
+
+                                .title {
+                                    width: 100%;
+                                }
+
+                                .chart-labels {
+                                    padding-left: 20px;
+                                }
+                            }
+                        }
+
+                        .award-body {
+                            padding: 10px 0px;
+                        }
+                    }
+
+                    .rate-progress-area {
+                        .rate-area {
+                            .star-rate {
+                                .doughnut-container {
+                                    width: 65vw;
+                                }
+                            }
+                        }
+
+                        .progress-area {
+                            padding: 20px;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}

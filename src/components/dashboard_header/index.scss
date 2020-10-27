@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 58px;
-    margin-bottom: 76px;
+    margin-bottom: 50px;
     box-sizing: border-box;
 
     .search-section {
@@ -94,8 +94,8 @@
 
                     .notification-icon {
                         position: absolute;
-                        width: 10px;
-                        height: 10px;
+                        width: 8px;
+                        height: 8px;
                         background: #FC4810;
                         border-radius: 100%;
                         right: 6px;
@@ -146,6 +146,7 @@
                     right: 0px;
                     margin-top: 10px;
                     overflow: hidden;
+                    z-index: 10;
 
                     .item {
                         font-size: 15px;
@@ -182,31 +183,13 @@
     }
 }
 
-
-@media (max-width: 1400px) {
+@media (max-width: 1600px) {
     #dashboard-header {
-        flex-direction: column-reverse;
-        align-items: flex-end;
-        padding: 20px 58px;
-        height: unset;
+        padding: 0 35px;
+        margin-bottom: 50px;
 
         .search-section {
-            width: 100%;
-            margin-top: 20px;
-        }
-    }
-}
-
-@media (max-width: 1300px) {
-    #dashboard-header {
-        padding: 20px 30px;
-    }
-}
-
-@media (max-width: 992px) {
-    #dashboard-header {
-        .search-section {
-            height: 45px;
+            height: 50px;
 
             button {
                 font-size: 16px;
@@ -217,6 +200,47 @@
                 padding-left: 150px;
                 font-size: 16px;
             }
+        }
+
+        .right-section {
+            padding-left: 30px;
+    
+            .notice {
+                .help-info {
+                    column-gap: 30px;
+
+                    .icon-btn {
+                        width: 35px;
+                        height: 35px;
+                    }
+                }
+
+            }
+
+            .user-setting {
+                padding-left: 30px;
+
+                .dropdown {
+                    .name{
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 992px) {
+    #dashboard-header {
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        height: unset;
+        padding-top: 20px;
+
+        .search-section {
+            width: 100%;
+            margin-top: 20px;
         }
     }
 }
@@ -267,7 +291,7 @@
     #dashboard-header {
         padding: 20px 0;
         margin: 0 auto;
-        width: 90vw;
+        width: 93vw;
 
         .search-section {
             height: 45px;
