@@ -15,11 +15,6 @@
                     font-size: 16px;
                     padding: 30px 0;
                     text-align: center;
-
-                    &:first-child {
-                        text-align: left;
-                        padding-left: 5px;
-                    }
                 }
             }
         }
@@ -35,16 +30,13 @@
                 td {
                     text-align: center;
                     padding: 20px 0;
-                    padding-left: 15px;
                     background: #12131F;
                     border-top: 1px solid #707070;
                     border-bottom: 1px solid #707070;
                     font-size: 16px;
 
                     &:first-child {
-                        text-align: left;
                         border-left: 1px solid #707070;
-                        padding-left: 20px;
 
                         img {
                             width: 18px;

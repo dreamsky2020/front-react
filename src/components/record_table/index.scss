@@ -10,10 +10,9 @@
                     text-transform: uppercase;
                     font-size: 18px;
                     padding: 40px 0;
+                    text-align: center;
 
-                    &:first-child {
-                        text-align: left;
-                    }
+
                 }
             }
         }
@@ -21,9 +20,8 @@
         tbody {
             tr {
                 td {
-                    text-align: left;
+                    text-align: center;
                     padding: 15px 0;
-                    padding-left: 15px;
                 }
             }
 
@@ -80,7 +78,6 @@
                     td {
                         font-size: 12px;
                         padding: 10px 0;
-                        padding-left: 15px;
                     }
                 }
             }
