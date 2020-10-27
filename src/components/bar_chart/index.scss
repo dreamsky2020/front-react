@@ -1,0 +1,96 @@
+#barChartContainer {
+    background-color: #151423;
+    border-radius: 10px;
+    padding: 30px 40px;
+    width: 100%;
+    margin-bottom: 30px;
+
+    .chart-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 60px;
+        padding-right: 30px;
+
+        .chart-name {
+            color: white;
+            font-size: 24px;
+        }
+
+        .select-group {
+            display: flex !important;
+            column-gap: 40px !important;
+            padding: 0px !important;
+
+            .select-dropholder {
+                &:first-child {
+                    width: 160px !important;
+                    height: 40px !important;
+                }
+
+                &:last-child {
+                    width: 90px !important;
+                    height: 40px !important;
+                }
+
+                .dropdown {
+                    border: 1px solid white;
+                    padding-left: 10px;
+
+                    &:after {
+                        top: 16px !important;
+                        right: 10px !important;
+                    }
+
+                    p {
+                        color: white;
+                        font-size: 14px;
+                    }
+                }
+
+                .menu {
+                    top: 50px;
+                }
+            }
+        }
+    }    
+}
+
+@media screen  and (max-width: 1300px) {
+    #barChartContainer {
+        .chart-header {
+            padding-right: 0px;
+
+            .chart-name {
+                font-size: 20px;
+            }
+
+            .select-group {
+                column-gap: 20px !important;
+            }
+        }
+    }
+}
+
+@media screen  and (max-width: 575px) {
+    #barChartContainer {
+        padding: 20px 10px;
+
+        .chart-header {
+            flex-direction: column;
+            row-gap: 15px;
+            padding-bottom: 40px;
+            padding-left: 10px;
+            padding-right: 10px;
+
+            p {
+                width: 100%;
+            }
+
+            .select-group {
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
+    }
+}

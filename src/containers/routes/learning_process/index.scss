@@ -12,6 +12,145 @@
                 font-size: 40px;
                 color: #E1E1E1;
             }
+
+            .select-group {
+                display: flex;
+                flex-wrap: wrap;
+                column-gap: 100px;
+                padding: 60px 0;
+
+                p {
+                    color: #8A88B7;
+                }
+            }
+
+            .main-body {
+                display: flex;
+                column-gap: 20px;
+
+                .bar-line-chart-container {
+                    width: 60vw;
+                }
+
+                .progress-container {
+                    flex: 1;
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    #dashboard-learning-progress {
+        .main-panel {
+            .content {
+                padding: 0 30px 30px 30px;
+
+                .page-title {
+                    font-size: 32px;
+                }
+
+                .select-group {
+                    padding: 40px 0;
+                    column-gap: 60px;
+
+                    .select-dropholder {
+                        width: 250px;
+                    }
+                }
+                
+                .main-body {
+                    .bar-line-chart-container {
+                        width: 58vw;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    #dashboard-learning-progress {
+        .main-panel {
+            .content {
+                padding: 0px;
+                margin: 0 auto;
+
+                .main-body {
+                    flex-direction: column;
+                    row-gap: 30px;
+
+                    .bar-line-chart-container {
+                        width: 83vw;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    #dashboard-learning-progress {
+        .main-panel {
+            .content {
+                .select-group {
+                    .select-dropholder {
+                        width: 200px;
+                    }
+                }
+
+                .main-body {
+                    .bar-line-chart-container {
+                        width: 88vw;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    #dashboard-learning-progress {
+        .main-panel {
+            .content {
+                width: 93vw;
+                padding: 0px;
+                margin: 0 auto;
+
+                .page-title {
+                    font-size: 24px;
+                }
+
+                .select-group {
+                    justify-content: space-between;
+                    padding: 20px 0;
+                    column-gap: unset;
+
+                    .select-dropholder {
+                        width: 160px;
+                        height: 50px;
+
+                        .dropdown {
+                            padding-left: 10px;
+                            font-size: 16px;
+
+                            &::after {
+                                right: 10px;
+                                top: 20px;
+                            }
+                        }
+                    }
+                }
+
+                .main-body {
+                    .bar-line-chart-container {
+                        width: 100%;
+                    }
+                }
+            }
         }
     }
 }

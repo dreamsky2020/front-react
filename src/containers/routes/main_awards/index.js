@@ -31,7 +31,7 @@ const awardWonData = {
       pointHoverRadius: 5,
 
       pointStyle: 'circle',
-      pointBackgroundColor: '#3794FC',
+      pointBackgroundColor: '#fff',
 
       // pointRadius: 3,
       // pointHitRadius: 10,
@@ -53,7 +53,7 @@ const awardWonData = {
       fill: true,
       backgroundColor: "rgba(157,96,251,0.2)",
       borderColor: "#9D60FB",
-      pointBackgroundColor: '#9D60FB',
+      pointBackgroundColor: '#fff',
     }
   ]
 };

@@ -1,0 +1,212 @@
+#rank-point-container {
+    background-color: #12131F;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+
+    .header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .name {
+            flex: 1;
+            color: #fff;
+            font-size: 24px;
+
+            span {
+                color: #0087CB;
+            }
+        }
+
+        .select-dropholder {
+            width: 90px;
+            height: 40px;
+
+            .dropdown {
+                border: 1px solid #fff;
+                padding-left: 10px;
+
+                &::after {
+                    top: 16px;
+                    right: 10px;
+                }
+
+                p {
+                    color: #fff;
+                    font-size: 14px;
+                }
+            }
+
+            .menu {
+                top: 50px;
+            }
+        }
+    }
+
+    .progress-bar-container {
+        position: relative;
+        width: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #515A88;
+        border-radius: 100%;
+        margin: 30px 0;
+
+        .value-container {
+            position: absolute;
+            width: 80%;
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+
+            .value {
+                color: white;
+                font-size: 50px;
+            }
+
+            .description {
+                color: white;
+                opacity: 0.6;
+                font-size: 12px;
+            }
+        }
+    }
+
+    .point-container {
+        width: 100%;
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 30px;
+            margin-bottom: 20px;
+
+            &:first-child {
+                .title {
+                    &::after {
+                        background: #02BC77;
+                        box-shadow: 0 1px 6px #02BC77;
+                    }
+                }
+
+                .point {
+                    text-align: center;
+                    width: initial;
+                }
+            }
+
+            &:nth-child(2) {
+                .title {
+                    &::after {
+                        background: #4791FF;
+                        box-shadow: 0 1px 6px #4791FF;
+                    }
+                }
+            }
+
+            &:nth-child(3) {
+                .title {
+                    &::after {
+                        background: #FF7D27;
+                        box-shadow: 0 1px 6px #FF7D27;
+                    }
+                }
+            }
+
+            .title {
+                color: white;
+                font-size: 16px;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    border-radius: 10px;
+                    top: 0px;
+                    left: -30px;
+                }
+            }
+
+            .point {
+                color: white;
+                // width: 60%;
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 100%;
+                    margin-right: 10px;
+                }
+
+            }
+
+
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    #rank-point-container {
+        padding: 20px;
+
+        .header {
+            .name {
+                font-size: 20px;
+            }
+        }
+
+        .progress-bar-container {
+            width: 70%;
+
+            .value-container {
+                .value {
+                    font-size: 32px;
+                }
+            }
+        }
+
+        .point-container {
+            .item {
+                padding-left: 15px;
+
+                .title {
+                    font-size: 14px;
+
+                    &::after {
+                        width: 10px;
+                        height: 10px;
+                        top: 5px;
+                        left: -15px;
+                    }
+                }
+
+                .point {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #rank-point-container {
+        padding: 30px 40px;
+
+        .progress-bar-container {
+            width: 50%;
+        }
+    }
+}
+
