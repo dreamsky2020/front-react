@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { withRouter, Link } from 'react-router-dom'
+import { Collapse } from 'reactstrap';
 import {TweenMax} from 'gsap'
 import './index.scss'
 
@@ -92,13 +93,13 @@ export class index extends Component {
                                         Jasica Wingelton
                                 </div>
 
-                                {settingItemOpen &&
-                                <div className="items">
+                                {/* {settingItemOpen && */}
+                                <Collapse isOpen={settingItemOpen} className="items">
                                     <div className="item" onClick={() => this.handleChangeSetting('profile')}>Edit Profile</div>
                                     <div className="item">Delete Account</div>
                                     <div className="item">Logout</div>
-                                </div>
-                                }
+                                </Collapse>
+                                {/* } */}
                             </div>
                         </div>
                     </div>

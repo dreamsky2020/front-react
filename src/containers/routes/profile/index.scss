@@ -7,8 +7,8 @@
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/general/black-texture-background-1080P-wallpaper-middle-size.png) fixed center center;
             background-repeat: no-repeat;
             background-size: cover;
-
             padding: 0 64px 70px 64px;
+            animation: fadeIn 0.5s ease;
 
             .dashboard-header-title {
                 font-size: 40px;
